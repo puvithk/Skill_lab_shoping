@@ -10,10 +10,10 @@ const Button = (props) => {
         <div className="buttons flex gap-2">
           {props.category.map((e) => {
             return (
-              <button className="bg-black text-white p-1 pl-2 pr-2 rounded-full" key={e} onClick={() => props.filterValue(e)}>{e}</button>
+              <button className="bg-[#212B37] text-white p-1 pl-2 pr-2 rounded-full" key={e} onClick={() => props.filterValue(e)}>{e}</button>
             );
           })}
-          <button className="bg-black text-white p-1 pl-2 pr-2 rounded-full" onClick={() => props.setData(data)}>All</button>
+          <button className="bg-[#212B37] text-white p-1 pl-2 pr-2 rounded-full" onClick={() => props.setData(data)}>All</button>
         </div>
       </div>
     </>

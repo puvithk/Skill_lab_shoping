@@ -10,18 +10,24 @@ import CartShop from './assets/Pages/cartShop'
 
 function App() {
   const [data, setData] = useState(Data)
-  const [newData, setNewData] = useState(Data)
+  const [newData, setNewData] = useState([])
   const category = [...new Set(Data.map((item) => item.cat))];
 
   const filterValue = (cat) => {
     const newValue = Data.filter((newvalue) => newvalue.cat === cat);
     setData(newValue);
   }
-
+  const setCartData = (val) => {
+     const OldData = Data.filter((oldValue)=> oldValue.brandName !== val)
+     setNewData([...newData, OldData])
+     console.log(newData)
+    
+  };
+  
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Navbar Data={newData} />
         <Routes>
           <Route
             path="/"
@@ -30,7 +36,8 @@ function App() {
               realDate ={Data}
               filterValue={filterValue}
               setData ={setData} 
-              category={category}/>
+              category={category}
+              setNewData={setCartData}/>
             }
           />
           <Route

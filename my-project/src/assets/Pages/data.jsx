@@ -4,28 +4,32 @@ const Data = [
         brandName: "Pants",
         price: "₹25222",       
         rating: "(4.5)",
-        cat :"Dress"
+        cat :"Dress",
+        img :"../assets/images/Pants.jpg"
     },
     {
         id: 2,
         brandName: "Shirt",
         price: "₹252",       
         rating: "(4.9)",
-        cat:"Dress"
+        cat:"Dress",
+        img :"../images/Shirt.jpg"
     },
     {
         id: 3,
         brandName: "Watch",
         price: "₹2522",       
         rating: "(4.5)",
-        cat:"Accessories"
+        cat:"Accessories",
+        img :"../images/Watch.jpg"
     },
     {
         id: 4,
         brandName: "Detergent",
         price: "₹2522",       
         rating: "(4.5)",
-        cat:"Gromming"
+        cat:"Gromming",
+        img :"../images/Pants.png"
     }
 ];
 
